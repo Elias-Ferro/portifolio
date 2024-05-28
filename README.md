@@ -1,10 +1,10 @@
 # Portifólio
 
-Uma Landing page como o intuito de apresentar minha evolução como alguns projetos e minha carreira como desenvolvedor.
+Uma Landing page como o intuito de apresentar minha evolução com alguns projetos
 
 ## Features
 
-Portifólio em desenvolvimento utilizando frameworks typescript e linguagem de programação javascript.
+Portifólio em desenvolvimento utilizando essas tecnologias:
 
 <div style="display: inline_block">
         <img heigth="30" width="40" alt="html3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" /> <br />
