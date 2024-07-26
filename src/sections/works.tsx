@@ -10,8 +10,13 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { Project } from "../types/types";
 
-const renderCardWorkdAndProjects = (title, summary, technologies) => {
+const renderCardWorkdAndProjects = ({
+  title,
+  summary,
+  technologies,
+}: Project) => {
   return (
     <Card
       sx={{
@@ -29,7 +34,7 @@ const renderCardWorkdAndProjects = (title, summary, technologies) => {
               {summary}
             </Typography>
             <Stack direction={"row"} spacing={1}>
-              {technologies.map((tecnology: string) => (
+              {technologies.map((tecnology) => (
                 <Chip
                   label={tecnology.title}
                   component={"a"}
@@ -88,11 +93,7 @@ const Works = () => {
       <Grid container spacing={3} sx={{ display: "flex", flexWrap: "wrap" }}>
         {projects.map((project, index) => (
           <Grid item key={index} style={{ marginBottom: "20px" }}>
-            {renderCardWorkdAndProjects(
-              project.title,
-              project.summary,
-              project.technologies,
-            )}
+            {renderCardWorkdAndProjects(project)}
           </Grid>
         ))}
       </Grid>

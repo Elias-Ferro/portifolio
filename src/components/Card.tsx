@@ -6,15 +6,9 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { Cards } from "../types/types";
 
-type Props = {
-  h5: string;
-  h1: string;
-  link: string;
-  icon: unknown;
-};
-
-export const CustomCard = ({ icon, h5, h1, link }: Props) => {
+export const CustomCard = ({ h5, h1, link, icon }: Cards) => {
   return (
     <Box sx={{ minWidth: "275px" }}>
       <Card variant="outlined">
