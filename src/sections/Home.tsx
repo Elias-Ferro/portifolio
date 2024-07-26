@@ -35,12 +35,8 @@ const Home = () => {
 
     const monthsWorked = currentMonth.diff(startedIn, "month");
 
-    const startDateFormatted = startedIn.format("DD/MM/YYYY");
-    const endDateFormatted = currentMonth.format("DD/MM/YYYY");
-
-    console.log(`Início: ${startDateFormatted}`);
-    console.log(`Atual: ${endDateFormatted}`);
-    console.log(`Meses de trabalho: ${monthsWorked}`);
+    // const startDateFormatted = startedIn.format("DD/MM/YYYY");
+    // const endDateFormatted = currentMonth.format("DD/MM/YYYY");
 
     return {
       monthsWorked,
