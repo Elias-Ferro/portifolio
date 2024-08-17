@@ -1,4 +1,5 @@
 import { AppBar, Avatar, Box, Button, Stack } from "@mui/material";
+import DropOptionButton from "./base/DropOptionButton";
 
 const Header = ({ urlAvatarImage, listButtons }) => {
   return (
@@ -14,6 +15,7 @@ const Header = ({ urlAvatarImage, listButtons }) => {
                 </Button>
               );
             })}
+            <DropOptionButton />
           </Stack>
         </Stack>
       </AppBar>
