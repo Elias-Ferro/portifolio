@@ -3,8 +3,9 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
+import { theme } from "../../style/theme";
 
-const DropOptionButton = ({listOptions}) => {
+const DropOptionButton = ({ listOptions }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -22,7 +23,8 @@ const DropOptionButton = ({listOptions}) => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        sx={{ color: "#91ff00" }}
+        variant="outlined"
+        sx={{ color: theme.palette.primary.main, textTransform: "none" }}
       >
         Follow
       </Button>
@@ -39,7 +41,9 @@ const DropOptionButton = ({listOptions}) => {
             <MenuItem
               key={index}
               onClick={handleClose}
-              sx={{ color: "#1976d2" }}
+              sx={{
+                fontSize: "14px",
+              }}
             >
               <Link href={option.link} underline="none" target="_blank">
                 {option.label}
