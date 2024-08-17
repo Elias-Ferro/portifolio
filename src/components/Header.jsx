@@ -1,5 +1,6 @@
 import { AppBar, Avatar, Box, Button, Stack } from "@mui/material";
 import DropOptionButton from "./base/DropOptionButton";
+import { theme } from "../style/theme";
 
 const links = [
   { label: "Linkedin", link: "https://www.linkedin.com/in/elias-ferro-dev/" },
@@ -10,13 +11,27 @@ const links = [
 const Header = ({ urlAvatarImage, listButtons }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ padding: "14px" }}>
+      <AppBar
+        sx={{
+          padding: "10px",
+          // backgroundColor: theme.palette.background.default,
+          backgroundColor: "rgba(255, 255, 255, 0.7)",
+          backdropFilter: "blur(10px)",
+        }}
+      >
         <Stack direction={"row"} justifyContent={"space-between"}>
           <Avatar alt="profile-pixel-art" src={urlAvatarImage} />
           <Stack direction={"row"} gap={"10px"}>
             {listButtons.map((button, index) => {
               return (
-                <Button key={index} variant="text" sx={{ color: "#fff" }}>
+                <Button
+                  key={index}
+                  variant="text"
+                  sx={{
+                    color: theme.palette.text.primary,
+                    textTransform: "none",
+                  }}
+                >
                   {button.label}
                 </Button>
               );
