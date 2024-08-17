@@ -2,6 +2,7 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from "@mui/material";
 
 const DropOptionButton = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -46,7 +47,9 @@ const DropOptionButton = () => {
               onClick={handleClose}
               sx={{ color: "#1976d2" }}
             >
-              {network.label}
+              <Link href={network.link} underline="none" target="_blank">
+                {network.label}
+              </Link>
             </MenuItem>
           );
         })}
