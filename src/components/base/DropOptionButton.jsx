@@ -4,15 +4,9 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
 
-const DropOptionButton = () => {
+const DropOptionButton = ({listOptions}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  const listNetwork = [
-    { label: "Linkedin", link: "https://www.linkedin.com/in/elias-ferro-dev/" },
-    { label: "Git Hub", link: "https://github.com/Elias-Ferro" },
-    { label: "Instagram", link: "#" },
-  ];
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -40,15 +34,15 @@ const DropOptionButton = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        {listNetwork.map((network, index) => {
+        {listOptions?.map((option, index) => {
           return (
             <MenuItem
               key={index}
               onClick={handleClose}
               sx={{ color: "#1976d2" }}
             >
-              <Link href={network.link} underline="none" target="_blank">
-                {network.label}
+              <Link href={option.link} underline="none" target="_blank">
+                {option.label}
               </Link>
             </MenuItem>
           );
