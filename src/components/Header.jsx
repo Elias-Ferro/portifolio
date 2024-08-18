@@ -38,6 +38,7 @@ const Header = ({ urlAvatarImage, listButtons }) => {
                     color: theme.palette.text.primary,
                     textTransform: "none",
                   }}
+                  onClick={button.onClick}
                 >
                   {button.label}
                 </Button>
