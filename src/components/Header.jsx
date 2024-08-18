@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, Button, Stack } from "@mui/material";
+import { AppBar, Avatar, Box, Button, Chip, Stack } from "@mui/material";
 import DropOptionButton from "./base/DropOptionButton";
 import { theme } from "../style/theme";
 
@@ -15,17 +15,24 @@ const Header = ({ urlAvatarImage, listButtons }) => {
         sx={{
           padding: "10px",
           // backgroundColor: theme.palette.background.default,
-          backgroundColor: "rgba(255, 255, 255, 0.7)",
-          backdropFilter: "blur(10px)",
+          backgroundColor: "rgba(255, 255, 255, 0.45)",
+          backdropFilter: "blur(2px)",
         }}
       >
         <Stack direction={"row"} justifyContent={"space-between"}>
-          <Avatar alt="profile-pixel-art" src={urlAvatarImage} />
+          <Stack direction="row" spacing={1}>
+            <Chip
+              avatar={<Avatar alt="profile-pixel-art" src={urlAvatarImage} />}
+              variant="outlined"
+              label="Elias Ferro Developer"
+            />
+          </Stack>
+
           <Stack direction={"row"} gap={"10px"}>
-            {listButtons.map((button, index) => {
+            {listButtons.map((button, id) => {
               return (
                 <Button
-                  key={index}
+                  key={id}
                   variant="text"
                   sx={{
                     color: theme.palette.text.primary,
